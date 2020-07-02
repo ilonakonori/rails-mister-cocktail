@@ -14,16 +14,14 @@
       <% end %>
     </div>
   </div>
-    // <div class="cocktail-show-card">
-    //   <h3>Ingredients:</h3>
-    //     <ul class="list-unstyled">
-    //       <% @cocktail.doses.each do |dose| %>
-    //         <li>
-    //           <% if dose.valid? %>
-    //             <%= render :doses %>
-    //           <% end %>
-    //         </li>
-    //       <% end %>
-    //     </ul>
-    // </div>
+  <div class="cocktail-card">
+  <h3 class="text-left" style="color:white">Ingredients:</h3>
+    <ul class="list">
+      <% @cocktail.doses.each do |dose| %>
+        <li>
+          <%= dose.description %> <%= dose.ingredient.name %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
