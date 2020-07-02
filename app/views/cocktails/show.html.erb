@@ -1,22 +1,29 @@
 <div class="container pad20">
-  <h1 class="text-center"> <%= @cocktail.name %> </h1>
-  <div class="row">
-    <div class="col-xs-12 col-md-6">
-    </div>
-  </div>
+  <h1 class="text-left" style="font-size: 100px"> <%= @cocktail.name %> </h1>
   <div class="container pad20">
-  <h3 class="text-center">Add an ingredient</h1>
+  <h3 class="text-left">Add an ingredient</h1>
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <%= simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.association :ingredient, prompt: "Pick one from the list" %>
       <%= f.input :description %>
-      <%= f.submit "Submit", class: "btn" %>
+        <div class="submit-goback">
+          <%= f.submit "Submit", class: "btn pad20" %>
+          <%= link_to "Go back", cocktails_path, class: "btn pad20 back" %>
+        </div>
       <% end %>
-      <div class="pad20">
-        <%= link_to "Go back", cocktails_path, class: "btn" %>
-      </div>
     </div>
   </div>
-  </div>
+    // <div class="cocktail-show-card">
+    //   <h3>Ingredients:</h3>
+    //     <ul class="list-unstyled">
+    //       <% @cocktail.doses.each do |dose| %>
+    //         <li>
+    //           <% if dose.valid? %>
+    //             <%= render :doses %>
+    //           <% end %>
+    //         </li>
+    //       <% end %>
+    //     </ul>
+    // </div>
 </div>

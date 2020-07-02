@@ -13,11 +13,15 @@
 @import "pages/index";
 
 body {
-  background-image: url("photo_cover.jpeg");
+  background-image: url('https://images.unsplash.com/photo-1507383832450-e75a770318ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80');
 }
 
 .pad20 {
   padding-top: 20px;
+}
+
+.pad10 {
+  font-size: 140px;
 }
 
 .btn {
@@ -27,7 +31,7 @@ body {
   text-decoration: bold;
   word-spacing: 15px;
   border-radius: none;
-  font-size: 30px;
+  font-size: 35px;
   padding-left: 5px;
   text-transform: uppercase;
 }
@@ -61,7 +65,7 @@ body {
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 220px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +78,7 @@ body {
 }
 // end of card
 
-// cards grid
+// card grid
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -122,6 +126,7 @@ body {
  .cocktail-list {
   label {
     font-size: 100px;
+    color: white;
   }
 }
 
